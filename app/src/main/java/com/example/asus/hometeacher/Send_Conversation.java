@@ -41,6 +41,9 @@ public class Send_Conversation extends Activity {
         conversationhistory_list=(ListView)findViewById(R.id.conversationhistory);
         inputsendmessage=(EditText)findViewById(R.id.inputmessage);
 
+        messageList.clear();
+        MessageAdapter adapter=new MessageAdapter(Send_Conversation.this,R.layout.conversationlist_item,messageList);
+        conversationhistory_list.setAdapter(adapter);
         Bundle bundle=getIntent().getExtras();
         receive=bundle.getString("receive");
         conversationid.setText("与"+receive+"的谈话");
@@ -92,7 +95,7 @@ public class Send_Conversation extends Activity {
                             receive=ht_conversation.getC_receive();
                             content=ht_conversation.getC_content();
                             int pictureid=R.mipmap.touxiang;
-                            Message m=new Message(new centermessage().name,content,pictureid);
+                            Message m=new Message("",content,pictureid);
                             messageList.add(m);
                         }
                         MessageAdapter adapter=new MessageAdapter(Send_Conversation.this,R.layout.conversationlist_item,messageList);
