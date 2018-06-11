@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<android.support.v7.widget.Toolbar
+    android:id="@+id/welcome"
+    android:gravity="center"
+    android:background="#038ffa"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    app:title="欢迎进入家教通">
+
+</android.support.v7.widget.Toolbar>
+    <RelativeLayout
+        android:layout_below="@+id/welcome"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/my_student_button"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:text="我的学生"
+            android:textSize="24dp"
+            android:background="@drawable/bg"
+            />
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/kkk"
+        android:layout_width="match_parent"
+        android:background="#038ffa"
+        android:layout_height="54dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:text="评分"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_below="@id/kkk"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/lll"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:background="#038ffa"
+            android:layout_height="200dp">
+            <ImageView
+                android:id="@+id/change_scorepicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <EditText
+            android:id="@+id/inputscore"
+            android:layout_below="@+id/lll"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:hint="请输入评价分值0~100"
+            />
+        <Button
+            android:id="@+id/score_submit"
+            android:gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/inputscore"
+            android:background="#038ffa"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:text="提交"/>
+    </RelativeLayout>
+
+</RelativeLayout>

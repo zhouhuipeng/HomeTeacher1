@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/aasearch"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:background="#038ffa"
+        android:layout_height="54dp">
+        <Spinner
+            android:id="@+id/student_helpstudygrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/helpstudygrade">
+        </Spinner>
+        <Spinner
+            android:id="@+id/student_helpstudyitem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/helpstudyitm">
+        </Spinner>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_below="@+id/aasearch"
+        android:id="@+id/gogo"
+        android:background="#038ffa"
+        android:layout_width="match_parent"
+        android:layout_height="54dp">
+
+        <Spinner
+            android:id="@+id/student_helpstudyarea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/helpstudyarea">
+        </Spinner>
+        <Button
+            android:id="@+id/searchstudent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#038ffa"
+            android:text="搜索"
+            />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/student_list"
+        android:layout_below="@+id/gogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+</RelativeLayout>
