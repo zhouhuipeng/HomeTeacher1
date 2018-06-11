@@ -78,7 +78,7 @@ public class Send_Conversation extends Activity {
 
     private void initMessage() {
         BmobQuery<HT_conversation> query=new BmobQuery<HT_conversation>();
-        String sql="select *from HT_conversation where C_sender in ("+new centermessage().name +","+receive+")";
+        String sql="select * from HT_conversation where C_sender in ('"+new centermessage().name +"','"+receive+"')";
         query.setSQL(sql);
         query.doSQLQuery(new SQLQueryListener<HT_conversation>() {
             @Override
