@@ -116,7 +116,7 @@ public class Send_Conversation extends Activity {
                         }
                     });
                     try {
-                        Thread.sleep(500);
+                        Thread.sleep(1800);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
