@@ -60,12 +60,13 @@ public class login extends Activity {
                         public void done(List<HT_Student> list, BmobException e) {
                             if(e==null){
                                 if(list.size()==1){
-                                    String phone = null,name=null,id=null,studyhistory=null;
+                                    String phone = null,name=null,id=null,studyhistory=null,objectid=null;
                                     for(HT_Student ht_student:list){
                                         phone=ht_student.getS_phone_number();
                                         name=ht_student.getS_name();
                                         id=ht_student.getS_id();
                                         studyhistory=ht_student.getS_grade();
+                                        objectid=ht_student.getObjectId();
                                     }
                                     Toast.makeText(login.this,"登陆成功！",Toast.LENGTH_SHORT).show();
                                     Intent intent=new Intent();
@@ -75,6 +76,7 @@ public class login extends Activity {
                                     intent.putExtra("identy","学生");
                                     intent.putExtra("name",name);
                                     intent.putExtra("studyhistory",studyhistory);
+                                    intent.putExtra("objectid",objectid);
                                     startActivity(intent);
                                     finish();
                                 }

@@ -3,6 +3,7 @@ package com.example.asus.hometeacher;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
@@ -54,13 +55,17 @@ public class Change_student extends Activity {
                     Toast.makeText(Change_student.this,"请选择您的补课区域",Toast.LENGTH_SHORT).show();
                 }
                 else {
+                    System.out.print(new centermessage().objectid);
+                        System.out.print(new centermessage().objectid);
                         HT_Student ht_student=new HT_Student();
                         ht_student.setS_name(change_name);
                         ht_student.setS_grade(change_studygrade);
                         ht_student.setS_item(change_studyitem);
                         ht_student.setS_area(change_studyarea);
                         String sql="update HT_Student set S_name ="+change_name+", S_grade";
+
                         ht_student.update(new centermessage().objectid, new UpdateListener() {
+
                             @Override
                             public void done(BmobException e) {
                                 if(e==null){

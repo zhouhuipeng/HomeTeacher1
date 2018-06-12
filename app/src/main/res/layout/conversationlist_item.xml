@@ -9,7 +9,6 @@
             android:id="@+id/conversation_picture"
             android:layout_width="54dp"
             android:layout_height="54dp"
-            android:background="@mipmap/touxiang"
             />
         <RelativeLayout
             android:layout_width="wrap_content"
